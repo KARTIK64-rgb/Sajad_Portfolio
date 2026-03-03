@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Sajad Reshi - Professional Resume Writing</title>
+    <!-- Add lucide icons script for inline usage -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="container navbar-container">
+            <!-- Logo -->
+            <button class="logo" onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})">
+                <div class="logo-icon">
+                    <i data-lucide="file-text" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span style="font-family: 'Playfair Display', serif">
+                    Sahil Sajad Reshi
+                </span>
+            </button>
+
+            <!-- Desktop Links -->
+            <ul class="nav-links">
+                <li><button onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Home</button></li>
+                <li><button onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">About</button></li>
+                <li><button onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Portfolio</button></li>
+                <li><button onclick="document.querySelector('#reviews').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Reviews</button></li>
+                <li><button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Contact</button></li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="sun" class="sun" style="width: 20px; height: 20px;"></i>
+                    <i data-lucide="moon" class="moon" style="width: 20px; height: 20px;"></i>
+                </button>
+                <div class="hidden md:block" style="display: none;">
+                    <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"
+                        class="btn-primary">
+                        Get Your Resume
+                    </button>
+                </div>
+                <!-- Mobile Toggle -->
+                <button id="mobileMenuBtn" class="mobile-menu-btn">
+                    <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <ul>
+                <li><button onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})"
+                        class="mobile-nav-link">Home</button></li>
+                <li><button onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})"
+                        class="mobile-nav-link">About</button></li>
+                <li><button onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})"
+                        class="mobile-nav-link">Portfolio</button></li>
+                <li><button onclick="document.querySelector('#reviews').scrollIntoView({behavior: 'smooth'})"
+                        class="mobile-nav-link">Reviews</button></li>
+                <li><button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"
+                        class="mobile-nav-link">Contact</button></li>
+                <li style="margin-top: 16px;">
+                    <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"
+                        class="btn-primary" style="width: 100%;">
+                        Get Your Resume
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Background -->
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1618254170747-35f7ba2f9a6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjByZXN1bWUlMjBwb3J0Zm9saW8lMjBkZXNrJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3MjUzNTQ3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Professional workspace" />
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+
+        <div class="container hero-content text-center">
+            <div class="badge" style="margin: 0 auto 24px;">
+                <i data-lucide="star" style="width: 14px; height: 14px; fill: currentColor;"></i>
+                <span class="uppercase tracking-widest">Professional Resume Writer</span>
+            </div>
+
+            <h1 class="hero-title">
+                Resumes That Open <span class="italic text-accent">Doors</span> & Land <span class="text-gradient">Dream
+                    Jobs</span>
+            </h1>
+
+            <p class="hero-desc">
+                I craft compelling, ATS-optimised resumes that tell your unique story
+                and get you noticed by top recruiters. Over 200+ successful clients
+                and counting.
+            </p>
+
+            <div class="hero-ctas">
+                <button onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})"
+                    class="btn-primary">
+                    View My Work
+                </button>
+                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"
+                    class="btn-outline">
+                    Contact Me
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-icon"><i data-lucide="users" style="width: 18px; height: 18px;"></i></div>
+                    <div>
+                        <div class="stat-value font-serif">200+</div>
+                        <div class="stat-label">Clients Served</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i data-lucide="award" style="width: 18px; height: 18px;"></i></div>
+                    <div>
+                        <div class="stat-value font-serif">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i data-lucide="star" style="width: 18px; height: 18px;"></i></div>
+                    <div>
+                        <div class="stat-value font-serif">5.0</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})" class="scroll-down">
+            <span class="uppercase tracking-widest" style="font-size: 12px;">Scroll</span>
+            <i data-lucide="arrow-down" style="width: 16px; height: 16px;"></i>
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-img-wrapper">
+                <div class="about-img-container">
+                    <img src="https://images.unsplash.com/photo-1765005204058-10418f5123c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJlZXIlMjBqb2IlMjBpbnRlcnZpZXclMjBwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwxfHx8fDE3NzI1MzU0ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                        alt="Resume Writing Professional" />
+                    <div class="about-img-overlay"></div>
+                </div>
+
+                <div class="about-floating-card">
+                    <div class="about-floating-icon">
+                        <i data-lucide="sparkles" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <div class="about-floating-val font-serif">5+ Years</div>
+                        <div class="about-floating-label">of Experience</div>
+                    </div>
+                </div>
+
+                <div class="about-decor"></div>
+            </div>
+
+            <div>
+                <div class="badge">
+                    <span class="tracking-widest uppercase">About Me</span>
+                </div>
+
+                <h2 class="section-title">
+                    Helping Professionals Tell Their <span class="italic text-accent">Career Story</span>
+                </h2>
+
+                <p class="about-text">
+                    Hi! I'm a dedicated resume writer with a passion for helping people
+                    land their dream jobs. With a background in HR and talent
+                    acquisition, I understand exactly what recruiters look for — and I
+                    craft resumes that deliver.
+                </p>
+                <p class="about-text" style="margin-bottom: 32px;">
+                    Every resume I create is custom-built — no templates, no shortcuts.
+                    I take time to understand your background, aspirations, and target
+                    roles to create a document that truly represents you.
+                </p>
+
+                <div class="about-skills">
+                    <div class="skill-item">
+                        <i data-lucide="check-circle-2" class="skill-icon" style="width: 18px; height: 18px;"></i>
+                        <span>ATS-Optimised Formatting</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="check-circle-2" class="skill-icon" style="width: 18px; height: 18px;"></i>
+                        <span>Keyword-Rich Content</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="check-circle-2" class="skill-icon" style="width: 18px; height: 18px;"></i>
+                        <span>Industry-Specific Tailoring</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="check-circle-2" class="skill-icon" style="width: 18px; height: 18px;"></i>
+                        <span>LinkedIn Profile Optimisation</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="check-circle-2" class="skill-icon" style="width: 18px; height: 18px;"></i>
+                        <span>Cover Letter Writing</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="check-circle-2" class="skill-icon" style="width: 18px; height: 18px;"></i>
+                        <span>Career Gap Handling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" style="background-color: var(--bg-primary);">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge" style="margin: 0 auto 20px;">
+                    <span class="tracking-widest uppercase">Services</span>
+                </div>
+                <h2 class="section-title">
+                    What I <span class="italic text-accent">Offer</span>
+                </h2>
+                <p class="section-subtitle">
+                    Comprehensive career document services designed to get you noticed
+                    and hired faster.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="file-text" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h3 class="service-title font-serif">Resume Writing</h3>
+                    <p class="service-desc">Fully custom, ATS-optimised resumes tailored to your target role and
+                        industry.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="edit-3" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h3 class="service-title font-serif">Resume Redesign</h3>
+                    <p class="service-desc">Transform your existing resume into a polished, modern document that stands
+                        out.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h3 class="service-title font-serif">ATS Optimisation</h3>
+                    <p class="service-desc">Ensure your resume passes Applicant Tracking Systems with the right
+                        keywords.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="zap" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h3 class="service-title font-serif">Cover Letter</h3>
+                    <p class="service-desc">Compelling, personalised cover letters that complement your resume
+                        perfectly.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h3 class="service-title font-serif">LinkedIn Optimisation</h3>
+                    <p class="service-desc">Enhance your professional brand, attract recruiters, and turn profile views
+                        into opportunities.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="refresh-cw" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h3 class="service-title font-serif">Revision & Update</h3>
+                    <p class="service-desc">Update your existing resume with new experience, skills, or a fresh design.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge" style="margin: 0 auto 20px;">
+                    <span class="tracking-widest uppercase">My Work</span>
+                </div>
+                <h2 class="section-title">
+                    Resume <span class="italic text-accent">Portfolio</span>
+                </h2>
+                <p class="section-subtitle">
+                    A selection of resumes I've crafted for clients across various industries.
+                    Each one tailored to help them stand out.
+                </p>
+            </div>
+
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Tech">Tech</button>
+                <button class="filter-btn" data-filter="Finance">Finance</button>
+                <button class="filter-btn" data-filter="Marketing">Marketing</button>
+                <button class="filter-btn" data-filter="Healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="Executive">Executive</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-category="Tech">
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1736939666660-d4c776e0532c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHJlc3VtZSUyMGRvY3VtZW50fGVufDF8fHx8MTc3MjUzNTQ4MHww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Priya S. resume">
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-role font-serif">Senior Software Engineer</h3>
+                        <div class="portfolio-client">Priya S.</div>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">ATS-Optimised</span>
+                            <span class="portfolio-tag">FAANG Target</span>
+                            <span class="portfolio-tag">2-page</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-category="Finance">
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1565495296896-0a2b8081086e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN1bWUlMjB3cml0aW5nJTIwdHlwb2dyYXBoeSUyMGNsZWFuJTIwZGVzaWdufGVufDF8fHx8MTc3MjUzNTQ4NXww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Rahul M. resume">
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-role font-serif">Investment Analyst</h3>
+                        <div class="portfolio-client">Rahul M.</div>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Finance</span>
+                            <span class="portfolio-tag">CFA</span>
+                            <span class="portfolio-tag">Concise</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-category="Marketing">
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1618254170747-35f7ba2f9a6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjByZXN1bWUlMjBwb3J0Zm9saW8lMjBkZXNrJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3MjUzNTQ3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Sarah K. resume">
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-role font-serif">Marketing Director</h3>
+                        <div class="portfolio-client">Sarah K.</div>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Creative</span>
+                            <span class="portfolio-tag">Leadership</span>
+                            <span class="portfolio-tag">1-page</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item" data-category="Executive">
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1565495296896-0a2b8081086e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN1bWUlMjB3cml0aW5nJTIwdHlwb2dyYXBoeSUyMGNsZWFuJTIwZGVzaWdufGVufDF8fHx8MTc3MjUzNTQ4NXww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="James T. resume">
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-role font-serif">Chief Technology Officer</h3>
+                        <div class="portfolio-client">James T.</div>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">C-Suite</span>
+                            <span class="portfolio-tag">Board-Ready</span>
+                            <span class="portfolio-tag">Executive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item" data-category="Healthcare">
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1736939666660-d4c776e0532c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHJlc3VtZSUyMGRvY3VtZW50fGVufDF8fHx8MTc3MjUzNTQ4MHww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Ananya R. resume">
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-role font-serif">Clinical Research Associate</h3>
+                        <div class="portfolio-client">Ananya R.</div>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Healthcare</span>
+                            <span class="portfolio-tag">Research</span>
+                            <span class="portfolio-tag">ATS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item" data-category="Tech">
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1618254170747-35f7ba2f9a6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjByZXN1bWUlMjBwb3J0Zm9saW8lMjBkZXNrJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3MjUzNTQ3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="David L. resume">
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-role font-serif">Full Stack Developer</h3>
+                        <div class="portfolio-client">David L.</div>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Tech</span>
+                            <span class="portfolio-tag">Portfolio Link</span>
+                            <span class="portfolio-tag">Modern</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge" style="margin: 0 auto 20px;">
+                    <span class="tracking-widest uppercase">Client Reviews</span>
+                </div>
+                <h2 class="section-title">
+                    What My <span class="italic text-accent">Clients Say</span>
+                </h2>
+                <p class="section-subtitle">
+                    Real feedback from real clients who landed their dream jobs after working with me.
+                </p>
+
+                <div class="reviews-header-stats">
+                    <div class="stars">
+                        <i data-lucide="star" style="width: 20px; height: 20px;"></i>
+                        <i data-lucide="star" style="width: 20px; height: 20px;"></i>
+                        <i data-lucide="star" style="width: 20px; height: 20px;"></i>
+                        <i data-lucide="star" style="width: 20px; height: 20px;"></i>
+                        <i data-lucide="star" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span class="review-rating-num font-serif">5.0</span>
+                    <span class="text-tertiary" style="font-size: 14px;">· 200+ reviews</span>
+                </div>
+            </div>
+
+            <!-- Featured Review (Large) -->
+            <div class="featured-review">
+                <i data-lucide="quote" class="quote-icon"></i>
+
+                <div id="featured-review-stars" class="stars" style="margin-bottom: 24px;">
+                    <!-- Stars injected via JS -->
+                </div>
+
+                <blockquote id="featured-review-text" class="review-text font-serif">
+                    <!-- Text injected via JS -->
+                </blockquote>
+
+                <div class="review-author-area">
+                    <div class="review-author">
+                        <div class="review-avatar">
+                            <img id="featured-review-avatar" src="" alt="Avatar">
+                        </div>
+                        <div>
+                            <div id="featured-review-name" class="author-name font-serif"></div>
+                            <div id="featured-review-role" class="author-role"></div>
+                        </div>
+                    </div>
+
+                    <div class="review-nav">
+                        <button id="review-prev" class="review-nav-btn">
+                            <i data-lucide="chevron-left" style="width: 16px; height: 16px;"></i>
+                        </button>
+                        <button id="review-next" class="review-nav-btn">
+                            <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="review-dots" class="review-dots">
+                    <!-- Dots injected via JS -->
+                </div>
+            </div>
+
+            <!-- Mini Review Cards -->
+            <div class="mini-reviews">
+                <div class="mini-review active">
+                    <div class="stars" style="margin-bottom: 12px;">
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                    </div>
+                    <p class="mini-review-text">"I was struggling with my resume for months. After working with
+                        Sahil Sajad Reshi, I got 5 interview calls in just 2 weeks! The resume was beautifully formatted
+                        and
+                        perfectly highlighted my skills."</p>
+                    <div class="review-author" style="gap: 12px;">
+                        <div class="review-avatar" style="width: 32px; height: 32px; border-width: 1px;">
+                            <img src="https://images.unsplash.com/photo-1610387694365-19fafcc86d86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMG9mZmljZSUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MjQ3Mjg2M3ww&ixlib=rb-4.1.0&q=80&w=400"
+                                alt="Priya Sharma">
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; font-weight: 500;">Priya Sharma</div>
+                            <div class="text-tertiary" style="font-size: 11px;">Google</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-review">
+                    <div class="stars" style="margin-bottom: 12px;">
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                    </div>
+                    <p class="mini-review-text">"Absolutely professional service! My resume went from being ignored to
+                        landing me at Goldman Sachs. The attention to detail, the clean layout, and the perfect use of
+                        action words made all the difference."</p>
+                    <div class="review-author" style="gap: 12px;">
+                        <div class="review-avatar" style="width: 32px; height: 32px; border-width: 1px;">
+                            <img src="https://images.unsplash.com/photo-1664101606938-e664f5852fac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNsaWVudCUyMGJ1c2luZXNzJTIwbWFuJTIwc21pbGluZyUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MjUzNTQ4M3ww&ixlib=rb-4.1.0&q=80&w=400"
+                                alt="Rahul Mehta">
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; font-weight: 500;">Rahul Mehta</div>
+                            <div class="text-tertiary" style="font-size: 11px;">Goldman Sachs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-review">
+                    <div class="stars" style="margin-bottom: 12px;">
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                        <i data-lucide="star" style="width: 12px; height: 12px;"></i>
+                    </div>
+                    <p class="mini-review-text">"I was making a career switch and had no idea how to present my
+                        experience. The team understood my goal immediately and crafted a compelling narrative. I had 3
+                        interviews within a week."</p>
+                    <div class="review-author" style="gap: 12px;">
+                        <div class="review-avatar" style="width: 32px; height: 32px; border-width: 1px;">
+                            <img src="https://images.unsplash.com/photo-1765005204058-10418f5123c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJlZXIlMjBqb2IlMjBpbnRlcnZpZXclMjBwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwxfHx8fDE3NzI1MzU0ODJ8MA&ixlib=rb-4.1.0&q=80&w=400"
+                                alt="Sarah Kaur">
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; font-weight: 500;">Sarah Kaur</div>
+                            <div class="text-tertiary" style="font-size: 11px;">Unilever</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="badge" style="margin: 0 auto 20px;">
+                    <span class="tracking-widest uppercase">Contact Me</span>
+                </div>
+                <h2 class="section-title">
+                    Let's Connect and Build Your <span class="italic text-accent">Career Profile</span>
+                </h2>
+                <p class="section-subtitle" style="margin-bottom: 48px;">
+                    Reach out to me directly via mobile, email, or LinkedIn to get started on your professional resume.
+                </p>
+
+                <div class="contact-info-card">
+                    <div class="contact-item">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">Mobile Number</div>
+                            <a href="tel:+919876543210" class="contact-value" style="font-weight: 600;">+91 98765
+                                43210</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">Email Address</div>
+                            <a href="mailto:hello@resumecraft.in" class="contact-value"
+                                style="font-weight: 600;">hello@resumecraft.in</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">LinkedIn Profile</div>
+                            <a href="#" class="contact-value"
+                                style="font-weight: 600; text-decoration: underline;">linkedin.com/in/resumecraft</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div>
+                    <div class="logo" style="margin-bottom: 16px;">
+                        <div class="logo-icon">
+                            <i data-lucide="file-text" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <span style="font-family: 'Playfair Display', serif">
+                            Sahil Sajad Reshi
+                        </span>
+                    </div>
+                    <p class="footer-desc">
+                        Helping professionals land their dream jobs with expertly crafted,
+                        ATS-optimised resumes and LinkedIn profiles.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i data-lucide="linkedin"
+                                style="width: 16px; height: 16px;"></i></a>
+                        <a href="mailto:hello@resumecraft.in" class="social-link"><i data-lucide="mail"
+                                style="width: 16px; height: 16px;"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <button onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">Home</button>
+                        <button onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">About</button>
+                        <button onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">Portfolio</button>
+                        <button onclick="document.querySelector('#reviews').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">Reviews</button>
+                        <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">Contact</button>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-col-title">Services</h4>
+                    <div class="footer-links">
+                        <button onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">Resume Writing</button>
+                        <button onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">Resume Redesign</button>
+                        <button onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">ATS Optimisation</button>
+                        <button onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">Cover Letter</button>
+                        <button onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})"
+                            class="footer-link" style="text-align: left;">LinkedIn Makeover</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-bottom-text">© 2026 Sahil Sajad Reshi. All rights reserved.</p>
+                <p class="footer-bottom-text">Crafted with ❤️ to help you land your dream job</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
