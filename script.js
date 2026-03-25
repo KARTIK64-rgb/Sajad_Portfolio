@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.innerHTML = `
                 <div class="review-image-card">
-                    <img src="images/${imgName}" alt="Client Review ${idx + 1}" />
+                    <img src="images/${imgName}" alt="Client Review ${idx + 1}" loading="lazy" />
                     
                     <div class="review-image-arrows">
                         <button class="review-arrow prev-arrow" aria-label="Previous review">
@@ -189,4 +189,81 @@ document.addEventListener('DOMContentLoaded', () => {
     buildDots();
     updateSlideshow();
     startAutoSlide();
+    // ---- Number Counter Animation ----
+    const numberElements = document.querySelectorAll('.stat-number');
+
+    const countUpObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const targetEl = entry.target;
+            const decimals = parseInt(targetEl.getAttribute('data-decimals')) || 0;
+            
+            if (entry.isIntersecting) {
+                const targetValue = parseFloat(targetEl.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    
+                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                    const currentVal = (easeOutQuart * targetValue).toFixed(decimals);
+                    
+                    targetEl.textContent = currentVal;
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        targetEl.textContent = targetValue.toFixed(decimals);
+                    }
+                };
+                
+                window.requestAnimationFrame(step);
+            } else {
+                targetEl.textContent = (0).toFixed(decimals);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    numberElements.forEach(el => countUpObserver.observe(el));
+
+    // ---- Scroll Spy (Active Section Highlighting) ----
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                navLinks.forEach(link => {
+                    const onclickAttr = link.getAttribute('onclick');
+                    if (onclickAttr && onclickAttr.includes(`#${id}`)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, {
+        rootMargin: '-50% 0px -50% 0px'
+    });
+
+    sections.forEach(section => scrollSpyObserver.observe(section));
+
+    // ---- Visual Reveal On Scroll (Lazy Loading UI) ----
+    const revealElements = document.querySelectorAll('section > .container, .service-card, .team-card, .slideshow-wrapper');
+    revealElements.forEach(el => el.classList.add('reveal-on-scroll'));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+            } else {
+                entry.target.classList.remove('is-revealed');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
 });

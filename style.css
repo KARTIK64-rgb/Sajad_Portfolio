@@ -220,7 +220,7 @@ img {
   transition: color 0.2s;
 }
 
-.nav-link:hover { color: var(--accent-hover); }
+.nav-link:hover, .nav-link.active { color: var(--accent-hover); }
 
 .nav-actions {
   display: flex;
@@ -270,6 +270,11 @@ img {
   color: var(--text-secondary);
   font-size: 16px;
   border-bottom: 1px solid var(--border-subtle);
+  transition: color 0.2s;
+}
+
+.mobile-nav-link.active {
+  color: var(--accent-hover);
 }
 
 /* ========================= */
@@ -1204,4 +1209,18 @@ a.contact-value:hover { color: var(--accent-hover); }
 .icon {
   width: 20px;
   height: 20px;
+}
+
+/* ========================= */
+/*   REVEAL ON SCROLL (LAZY) */
+/* ========================= */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
