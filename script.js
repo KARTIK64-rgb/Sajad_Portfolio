@@ -198,6 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const decimals = parseInt(targetEl.getAttribute('data-decimals')) || 0;
             
             if (entry.isIntersecting) {
+                // Prevent duplicate animations if already run
+                if (targetEl.classList.contains('counted')) return;
+                targetEl.classList.add('counted');
+                
                 const targetValue = parseFloat(targetEl.getAttribute('data-target'));
                 const duration = 2000; // 2 seconds
                 
@@ -215,12 +219,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         window.requestAnimationFrame(step);
                     } else {
                         targetEl.textContent = targetValue.toFixed(decimals);
+                        countUpObserver.unobserve(targetEl);
                     }
                 };
                 
                 window.requestAnimationFrame(step);
-            } else {
-                targetEl.textContent = (0).toFixed(decimals);
             }
         });
     }, { threshold: 0.1 });
